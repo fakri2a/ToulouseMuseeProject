@@ -1,6 +1,4 @@
-package friendsofmine
-
-import toulousemusee.DemandeVisite
+package toulousemusee
 
 class Utilisateur {
 

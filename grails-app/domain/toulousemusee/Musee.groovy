@@ -9,10 +9,11 @@ class Musee {
     Adresse adresse
 
     static constraints = {
-        nom blank : false , unique: true
-        numeroTel size : 10 //05 61 61 63 33
+        nom blank : false
+        horairesOuverture time: true, blank: true
+        numeroTel blank: true
         accesMetro blank: true
         accesBus blank: true
-        adresse nullable: false
+        adresse nullable: true
     }
 }
