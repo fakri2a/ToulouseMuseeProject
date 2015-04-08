@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f3d245d-b1d8-43f8-af13-02339a0570a8" name="Default" comment="modif package">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/toulousemusee/GestionnaireSpec.groovy" afterPath="$PROJECT_DIR$/test/unit/toulousemusee/GestionnaireSpec.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/toulousemusee/Musee.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/toulousemusee/Musee.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/toulousemusee/MuseeSpec.groovy" afterPath="$PROJECT_DIR$/test/unit/toulousemusee/MuseeSpec.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/toulousemusee/Utilisateur.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/toulousemusee/Utilisateur.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/toulousemusee/UtilisateurSpec.groovy" afterPath="$PROJECT_DIR$/test/unit/toulousemusee/UtilisateurSpec.groovy" />
+    <list default="true" id="9f3d245d-b1d8-43f8-af13-02339a0570a8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ToulouseMusee.iws" />
@@ -577,7 +572,7 @@
       <workItem from="1428394462135" duration="1203000" />
       <workItem from="1428396094971" duration="2917000" />
       <workItem from="1428399609408" duration="1768000" />
-      <workItem from="1428492970102" duration="2226000" />
+      <workItem from="1428492970102" duration="2248000" />
     </task>
     <task id="LOCAL-00001" summary="classe domaine maj">
       <created>1428399754938</created>
@@ -603,11 +598,17 @@
       <option name="project" value="LOCAL" />
       <updated>1428493344300</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="modif package">
+      <created>1428495227141</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1428495227141</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8114000" />
+    <option name="totallyTimeSpent" value="8136000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
