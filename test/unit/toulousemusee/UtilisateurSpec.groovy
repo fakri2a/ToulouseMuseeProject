@@ -1,4 +1,4 @@
-package toulousemusee.toulousemusee
+package toulousemusee
 
 import grails.test.mixin.TestFor
 import spock.lang.Specification
