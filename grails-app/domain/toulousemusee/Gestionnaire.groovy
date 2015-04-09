@@ -5,5 +5,8 @@ class Gestionnaire {
 
     static constraints = {
         nom blank: false
+
     }
+
+
 }
