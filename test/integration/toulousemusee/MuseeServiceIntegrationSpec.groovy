@@ -116,15 +116,14 @@ class MuseeServiceIntegrationSpec extends Specification {
         resultatRechercheMusees.contains(unMusee)
         resultatRechercheMusees.clear()
 
-        when:"on cherche les musées dont la ville est Toulouse"
+
+        when:"on cherche les musées dont l'adresse est RUE DES ARCHIVES UN"
         resultatRechercheMusees = museeService.searchMusees(
-                "", "", "Toulouse", "", "")
+                "", "", "RUE DES ARCHIVES UN", "", "")
 
         then:"on trouve le bon musée"
-        resultatRechercheMusees.size() == 3
+        resultatRechercheMusees.size() == 1
         resultatRechercheMusees.contains(unMusee)
-        resultatRechercheMusees.contains(unMuseeBis)
-        resultatRechercheMusees.contains(unMuseeTierce)
         resultatRechercheMusees.clear()
 
         when:"on cherche les musées dans le 31500"
