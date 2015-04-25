@@ -6,4 +6,9 @@ class DemandeVisiteMusee {
     static constraints = {
         dateDemande nullable: false
     }
+
+    static belongsTo = [
+            demandeVisite: DemandeVisite,
+            musee        : Musee
+    ]
 }

@@ -6,14 +6,18 @@ class Musee {
     int numeroTel
     String accesMetro
     String accesBus
-    Adresse adresse
+
 
     static constraints = {
-        nom blank : false
+        nom blank : false, nullable: false
         horairesOuverture time: true, blank: true
-        numeroTel blank: true
-        accesMetro blank: true
-        accesBus blank: true
-        adresse nullable: true
+        numeroTel blank: true, nullable: true
+        accesMetro blank: true, nullable: true
+        accesBus blank: true, nullable: true
     }
+
+    static belongsTo = [
+            gestionnaire: Gestionnaire,
+            adresse     : Adresse
+    ]
 }

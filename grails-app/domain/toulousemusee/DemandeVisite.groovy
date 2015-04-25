@@ -1,7 +1,7 @@
 package toulousemusee
 
 class DemandeVisite {
-        int codeVisite
+        String codeVisite
         Date debutPeriode
         Date finPeriode
         int nbPersonne
@@ -9,8 +9,12 @@ class DemandeVisite {
 
     static constraints = {
 
-        debutPeriode nullable: true
-        finPeriode nullable: true
+        codeViste nullable: false, blank: false, unique: true
+        debutPeriode nullable: false
+        finPeriode nullable: false
+        nbPersonne min: 1
+        statut inList: ["En cours de traitement","Confirmée","Refusée"]
+
 
     }
 }
