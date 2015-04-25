@@ -5,10 +5,10 @@ import grails.transaction.Transactional
 @Transactional
 class ParseurCsvService {
     boolean transactional = true
+    MuseeService museeService
 
-    def parse(String pathOfCsv) {
-        MuseeService unMuseeService
 
+    void parse(String pathOfCsv) {
         File f = new File(pathOfCsv)
         Musee unMusee
         Adresse uneAdresse
@@ -16,8 +16,7 @@ class ParseurCsvService {
 
         f.splitEachLine(';') { colonne->
             if (colonne[0] != "EQ_NOM_EQUIPEMENT") {
-                if (!Gestionnaire.findByNom(colonne[1]))
-                    unGestionnaire = new Gestionnaire(colonne[1])
+                unGestionnaire = new Gestionnaire(nom: colonne[1])
 
                 uneAdresse = new Adresse(numero: colonne[7],
                         rue: colonne[8],
@@ -30,10 +29,8 @@ class ParseurCsvService {
                         accessBus: colonne[5],
                         accessMetro: colonne[6])
 
-                unMusee = unMuseeService.insertOrUpdateMusee(unMusee, uneAdresse, unGestionnaire)
-
+                museeService.insertOrUpdateMusee(unMusee, uneAdresse, unGestionnaire)
             }
-
         }
 
     }
