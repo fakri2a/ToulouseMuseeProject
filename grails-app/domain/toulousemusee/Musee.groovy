@@ -7,10 +7,11 @@ class Musee {
     String telephone
     String accessMetro
     String accessBus
+    Adresse adresse
 
     static hasOne = [
             gestionnaire: Gestionnaire,
-            adresse: Adresse
+            //adresse: Adresse
     ]
 
     static hasMany = [
