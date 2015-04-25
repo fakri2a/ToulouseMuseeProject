@@ -2,6 +2,7 @@ package toulousemusee
 
 import grails.transaction.Transactional
 
+
 @Transactional
 class MuseeService {
 
@@ -33,17 +34,32 @@ class MuseeService {
         unMusee.delete()
     }
 
-    List<Musee> searchMusees(String unNom, String unCodePostal, String uneAdresse) {
+    List<Musee> searchMusees(String unNom, String unCodePostal, String uneVille, String unAccesBus, String unAccesMetro) {
         def criteria = Musee.createCriteria()
-        def List<Musee> result = criteria.list {
+        List<Musee> result = criteria.list {
             if (unNom) {
-                like("nom", "%${unNom}%")
+                ilike("nom", "%${unNom}%")
             }
+
+
             if (unCodePostal) {
-                like("codePostal", "%${unCodePostal}%")
+                int code = Integer.parseInt(unCodePostal)
+                adresse {
+                    eq ("codePostal", code)
+                }
             }
-            if (uneAdresse) {
-                like("adresse", "%${uneAdresse}%")
+
+            if (uneVille) {
+                adresse {
+                    like("ville", "%${uneVille}%")
+                }
+            }
+
+            if (unAccesBus) {
+                like("accessBus", "%${unAccesBus}%")
+            }
+            if (unAccesMetro) {
+                like("accessMetro", "%${unAccesMetro}%")
             }
         }
         result
