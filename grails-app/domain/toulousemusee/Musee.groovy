@@ -1,23 +1,31 @@
 package toulousemusee
 
 class Musee {
+
     String nom
     String horairesOuverture
-    int numeroTel
-    String accesMetro
-    String accesBus
+    String telephone
+    String accessMetro
+    String accessBus
 
+    static hasOne = [
+            gestionnaire: Gestionnaire,
+            adresse: Adresse
+    ]
+
+    static hasMany = [
+            demandeVisiteMusees: DemandeVisiteMusee
+    ]
 
     static constraints = {
-        nom blank : false, nullable: false
-        horairesOuverture time: true, blank: true
-        numeroTel blank: true, nullable: true
-        accesMetro blank: true, nullable: true
-        accesBus blank: true, nullable: true
+        nom nullable: false, blank: false
+        horairesOuverture nullable: false, blank: false
+        telephone nullable: false, blank: false
+        accessMetro nullable: false, blank: true
+        accessBus nullable: false, blank: true
     }
 
-    static belongsTo = [
-            gestionnaire: Gestionnaire,
-            adresse     : Adresse
-    ]
+    public String toString() {
+        "${nom}"
+    }
 }
