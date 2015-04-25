@@ -9,6 +9,7 @@ class MuseeService {
 
     Musee insertOrUpdateMusee(Musee unMusee, Adresse uneAdresse, Gestionnaire unGestionnaire) {
         unMusee.setAdresse(uneAdresse)
+        unMusee.setGestionnaire(unGestionnaire)
         unMusee.save()
 
         unMusee
@@ -19,11 +20,19 @@ class MuseeService {
         unMusee.delete()
     }
 
-    Musee searchMusee(String nom, String unCodePostal, String uneAdresse) {
+    List<Musee> searchMusees(String unNom, String unCodePostal, String uneAdresse) {
         def criteria = Musee.createCriteria()
-        def Musee result
-
-
+        def List<Musee> result = criteria.list {
+            if (unNom) {
+                like("nom", "%${unNom}%")
+            }
+            if (unCodePostal) {
+                like("codePostal", "%${unCodePostal}%")
+            }
+            if (uneAdresse) {
+                like("adresse", "%${uneAdresse}%")
+            }
+        }
         result
     }
 }
