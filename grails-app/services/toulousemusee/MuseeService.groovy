@@ -16,19 +16,19 @@ class MuseeService {
      */
     Musee insertOrUpdateMusee(Musee unMusee, Adresse uneAdresse, Gestionnaire unGestionnaire) {
         unMusee.setAdresse(uneAdresse)
-        unMusee.setGestionnaire(unGestionnaire)
-
-        unGestionnaire.addToMusees(unMusee)
         uneAdresse.setMusee(unMusee)
+        unMusee.setGestionnaire(unGestionnaire)
+        unGestionnaire.addToMusees(unMusee)
 
         uneAdresse.save(flush: true)
         unGestionnaire.save(flush: true)
         unMusee.save(flush: true)
 
-        unMusee
+        return unMusee
     }
 
     def deleteMusee(Musee unMusee) {
+        unMusee.gestionnaire.removeFromMusees(unMusee)
         unMusee.adresse.delete()
         unMusee.delete()
     }

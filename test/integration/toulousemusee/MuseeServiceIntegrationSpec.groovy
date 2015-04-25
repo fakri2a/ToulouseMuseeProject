@@ -25,12 +25,12 @@ class MuseeServiceIntegrationSpec extends Specification {
 
         given: "un musée"
         Musee unMusee = new Musee(nom: "ARCHIVES MUNICIPALES TOULOUSE",
-                //gestionnaire: unGestionnaire,
+                gestionnaire: unGestionnaire,
                 horairesOuverture: "Ouvert du mardi au samedi de 13h à 19hfermé les dimanches, jours fériés et du 1er au 15 août",
-                //adresse: uneAdresse,
-                numeroTel: "05 61 61 63 33",
-                accesMetro: "Roseraie (A)",
-                accesBus: "36, 38")
+                adresse: uneAdresse,
+                telephone: "05 61 61 63 33",
+                accessMetro: "Roseraie (A)",
+                accessBus: "36, 38")
 
         when: "on tente de répercuter en base la création ou la modification du musée"
 
@@ -38,6 +38,9 @@ class MuseeServiceIntegrationSpec extends Specification {
 
         then: "le musée résultant pointe sur le musée initial"
         resultMusee == unMusee
+
+        and:"le musée résultant est valide"
+        resultMusee.validate()
 
         and:"le musée résultant n'a pas d'erreur"
         !resultMusee.hasErrors()
@@ -55,9 +58,9 @@ class MuseeServiceIntegrationSpec extends Specification {
                 gestionnaire: unGestionnaire,
                 horairesOuverture: "Ouvert du mardi au samedi de 13h à 19hfermé les dimanches, jours fériés et du 1er au 15 août",
                 adresse: uneAdresse,
-                numeroTel: "05 61 61 63 33",
-                accesMetro: "Roseraie (A)",
-                accesBus: "36, 38")
+                telephone: "05 61 61 63 33",
+                accessMetro: "Roseraie (A)",
+                accessBus: "36, 38")
 
         when:"on tente de supprimer le musee"
         museeService.deleteMusee(unMusee)
