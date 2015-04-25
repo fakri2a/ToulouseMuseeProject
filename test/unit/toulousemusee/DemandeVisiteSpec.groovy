@@ -22,16 +22,16 @@ class DemandeVisiteSpec extends Specification {
 
         where:
         unCode    | uneDateDebut                |    uneDateFin              |  unNombre                 |  unStatut
-        "6516156" | new Date(2015,12,05)        |    new Date(2015,12,15)    |  10                       |   "En cours de traitement"
-        "6161614" | new Date(2015,12,15)        |    new Date(2015,12,30)    |  1                        |   "Confirmée"
-        "50"      | new Date(2015,12,15)        |    new Date(2015,12,30)    |  100                      |   "Refusée "
+        "50"      | new Date(2015,12,05)        |    new Date(2015,12,15)    |  10                       |   "En cours de traitement"
+        "50"      | new Date(2015,12,15)        |    new Date(2015,12,30)    |  1                        |   "Confirmée"
+        "50"      | new Date(2015,12,15)        |    new Date(2015,12,30)    |  100                      |   "Refusée"
 
 
 
     }
 
     @Unroll
-    void "test l'invalidite d'une demande de visite non valide"(Integer unCode, Date uneDateDebut, Date uneDateFin, int unNombre, String unStatut) {
+    void "test l'invalidite d'une demande de visite non valide"(String unCode, Date uneDateDebut, Date uneDateFin, int unNombre, String unStatut) {
 
         given: "une demande de visite initialise avec ses paramatres  vide"
         DemandeVisite demandeVisite = new DemandeVisite(codeVisite: unCode, debutPeriode: uneDateDebut, finPeriode: uneDateFin, nbPersonne: unNombre, statut: unStatut)
@@ -40,10 +40,12 @@ class DemandeVisiteSpec extends Specification {
         demandeVisite.validate() == false
 
         where:
-        unCode      | uneDateDebut                |    uneDateFin              |  unNombre                 |  unStatut
-        null        | new Date(2015,12,05)        |    null                    |  10                       |   "regreqg"
-        "5"         | null                        |    new Date(2013,12,30)    |  5                        |   "qrgqrqgr"
-        ""          | new Date(2015,12,15)        |    new Date(2012,12,15)    |  0                        |   "qrgqgqg "
-
+        unCode      | uneDateDebut               |    uneDateFin              |  unNombre                 |  unStatut
+        "5"         | new Date(2015,12,05)       |    null                    |  10                       |   "En cours de traitement"
+        "5"         | null                       |    new Date(2013,12,30)    |  5                        |   "Confirmée"
+        "5"         | new Date(2015,12,15)       |    new Date(2012,12,15)    |  0                        |   "Refusée "
+        ""          | new Date(2015,12,15)       |    new Date(2012,12,15)    |  0                        |   "Refusée "
+        null        | new Date(2015,12,15)       |    new Date(2012,12,15)    |  0                        |   "Refusée "
+        null        | new Date(2015,12,15)       |    new Date(2012,12,15)    |  0                        |    null
     }
 }

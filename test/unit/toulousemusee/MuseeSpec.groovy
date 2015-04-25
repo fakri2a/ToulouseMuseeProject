@@ -1,8 +1,8 @@
 package toulousemusee
-
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 import spock.lang.Unroll
+
 
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
@@ -11,35 +11,45 @@ import spock.lang.Unroll
 class MuseeSpec extends Specification {
 
     @Unroll
-    void "test la validite d'un musee valide"(String unNom, String unHoraire, int unNum, String unAccesMetro, String unAccesBus, Adresse uneAdresse) {
+    void "teste la validite d'un Musee valide"(String unNom, String unHoraireOuverture, String unTelephone, String unAccessMetro, String unAccessBus,
+                                               Gestionnaire unGestionnaire, Adresse uneAdresse, Set<DemandeVisiteMusee> desDemandeVisiteMusee) {
 
-        given: "un musee initialise avec ses parametres non vide"
-        Musee musee = new Musee(nom: unNom, unHoraire: unHoraire, numeroTel: unNum, accesMetro: unAccesMetro, accesBus: unAccesBus, adresse: uneAdresse)
+        given: "une Musee initialise avec ses parametres valide"
+        Musee musee = new Musee(nom: unNom, horairesOuverture: unHoraireOuverture, telephone: unTelephone, accessMetro: unAccessMetro, accessBus: unAccessBus,
+                gestionnaire: unGestionnaire, adresse: uneAdresse, demandeVisiteMusees: desDemandeVisiteMusee)
 
-        expect: "le musee est valide"
+        expect: "le Musee est valide"
         musee.validate() == true
 
         where:
-        unNom    | unHoraire    |    unNum          |  unAccesMetro             |  unAccesBus       | uneAdresse
-        "un nom" | "12h00"      |    "051502568"    |  "station jean jaures"    |   "saint agne"    |   "1 rue jean colbert"
-        "un nom" | "13h05"      |    "051502568"    |  "station carme"          |   "saint agne"    |   "1 rue jean colbert"
-        "un nom" | " "          |    " "            |  " "                      |   " "             |    null
+        unNom       | unHoraireOuverture    | unTelephone   | unAccessMetro | unAccessBus   | unGestionnaire        | uneAdresse    | desDemandeVisiteMusee
+        "Gravin"    | "7h00"                | "0615208172"  | "oui"         | "oui"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
+
+
 
     }
 
     @Unroll
-    void "test l'invalidite d'un musee non valide"(String unNom, String _) {
+    void "test l'invalidite d'un Musee non valide"(String unNom, String unHoraireOuverture, String unTelephone, String unAccessMetro, String unAccessBus,
+                                                   Gestionnaire unGestionnaire, Adresse uneAdresse, Set<DemandeVisiteMusee> desDemandeVisiteMusee) {
 
-        given: "un musee initialise avec un nom vide"
-        Musee musee = new Musee(nom: unNom)
+        given: "un Musee initialisee avec un de ses parametres invalide"
+        Musee musee = new Musee(nom: unNom, horairesOuverture: unHoraireOuverture, telephone: unTelephone, accessMetro: unAccessMetro,
+                gestionnaire: unGestionnaire, adresse: uneAdresse, demandeVisiteMusees: desDemandeVisiteMusee)
 
-        expect: "le musee est invalide"
+        expect: "le Musee est invalide"
         musee.validate() == false
 
         where:
-        unNom   | _
-        null    | _
-        ""      | _
+        unNom       | unHoraireOuverture    | unTelephone   | unAccessMetro | unAccessBus   | unGestionnaire        | uneAdresse    | desDemandeVisiteMusee
+        ""          | "7h00"                | "0615208172"  | "oui"         | "non"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
+        null        | "7h00"                | "0615208172"  | "oui"         | "oui"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
+        "Gravin"    | ""                    | "0615208172"  | "oui"         | "oui"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
+        "Gravin"    | null                  | "0615208172"  | "oui"         | "non"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
+        "Gravin"    | "7h00"                | ""            | "oui"         | "oui"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
+        "Gravin"    | "7h00"                | null          | "oui"         | "non"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
+        "Gravin"    | "7h00"                | "0615208172"  | null          | "oui"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
+        "Gravin"    | "7h00"                | "0615208172"  | "oui"         | null          | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
 
     }
 }

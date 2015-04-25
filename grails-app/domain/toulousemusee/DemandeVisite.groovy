@@ -8,13 +8,12 @@ class DemandeVisite {
         String statut
 
     static constraints = {
-
-        codeViste nullable: false, blank: false, unique: true
+        codeVisite nullable: false, blank: false, unique: true
         debutPeriode nullable: false
         finPeriode nullable: false
         nbPersonne min: 1
-        statut inList: ["En cours de traitement","Confirmée","Refusée"]
-
-
+        statut nullable: false
     }
+
+
 }
