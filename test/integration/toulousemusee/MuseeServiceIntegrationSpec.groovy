@@ -9,6 +9,8 @@ import spock.lang.*
  */
 class MuseeServiceIntegrationSpec extends Specification {
     Adresse uneAdresse
+    Adresse uneAdresseBis
+    Adresse uneAdresseTierce
     Gestionnaire unGestionnaire
 
     MuseeService museeService
@@ -16,7 +18,15 @@ class MuseeServiceIntegrationSpec extends Specification {
     def setup() {
         unGestionnaire = new Gestionnaire(nom: "Mairie de Toulouse - DGA Culture")
         uneAdresse = new Adresse(numero: "2",
-                rue: "RUE DES ARCHIVES",
+                rue: "RUE DES ARCHIVES UN",
+                codePostal: 31500,
+                ville: "Toulouse")
+        uneAdresseBis = new Adresse(numero: "3",
+                rue: "RUE DES ARCHIVES BIS",
+                codePostal: 31500,
+                ville: "Toulouse")
+        uneAdresseTierce = new Adresse(numero: "4",
+                rue: "RUE DES ARCHIVES TIERCE",
                 codePostal: 31500,
                 ville: "Toulouse")
     }
@@ -70,7 +80,86 @@ class MuseeServiceIntegrationSpec extends Specification {
     }
 
     void "test recherche de musée(s)"() {
+        given: "un jeu de test avec plusieurs musées"
+        Musee unMusee = new Musee(nom: "ARCHIVES MUNICIPALES TOULOUSE",
+                gestionnaire: unGestionnaire,
+                horairesOuverture: "Ouvert du mardi au samedi de 13h à 19hfermé les dimanches, jours fériés et du 1er au 15 août",
+                adresse: uneAdresse,
+                telephone: "05 61 61 63 33",
+                accessMetro: "Roseraie (A)",
+                accessBus: "36, 38")
+        Musee unMuseeBis = new Musee(nom: "LE MEGA MUSEE DE TOULOUSE",
+                gestionnaire: unGestionnaire,
+                horairesOuverture: "Ouvert du mardi au samedi de 13h à 19hfermé les dimanches, jours fériés et du 1er au 15 août",
+                adresse: uneAdresseBis,
+                telephone: "05 61 61 63 34",
+                accessMetro: "Roseraie (A)",
+                accessBus: "36, 38")
+        Musee unMuseeTierce = new Musee(nom: "UN MUSEE PERDU DANS TOULOUSE",
+                gestionnaire: unGestionnaire,
+                horairesOuverture: "Ouvert du mardi au samedi de 13h à 19hfermé les dimanches, jours fériés et du 1er au 15 août",
+                adresse: uneAdresseTierce,
+                telephone: "05 61 61 63 35",
+                accessMetro: "Roseraie (A)",
+                accessBus: "36, 38")
 
+        museeService.insertOrUpdateMusee(unMusee, uneAdresse, unGestionnaire)
+        museeService.insertOrUpdateMusee(unMuseeBis, uneAdresseBis, unGestionnaire)
+        museeService.insertOrUpdateMusee(unMuseeTierce, uneAdresseTierce, unGestionnaire)
+
+        when:"on cherche les musées dont le nom est ARCHIVES MUNICIPALES TOULOUSE TIERCE"
+        List<Musee> resultatRechercheMusees = museeService.searchMusees(
+                "ARCHIVES MUNICIPALES TOULOUSE", "", "", "", "")
+
+        then:"on trouve le bon musée"
+        resultatRechercheMusees.size() == 1
+        resultatRechercheMusees.contains(unMusee)
+        resultatRechercheMusees.clear()
+
+        when:"on cherche les musées dont la ville est Toulouse"
+        resultatRechercheMusees = museeService.searchMusees(
+                "", "", "Toulouse", "", "")
+
+        then:"on trouve le bon musée"
+        resultatRechercheMusees.size() == 3
+        resultatRechercheMusees.contains(unMusee)
+        resultatRechercheMusees.contains(unMuseeBis)
+        resultatRechercheMusees.contains(unMuseeTierce)
+        resultatRechercheMusees.clear()
+
+        when:"on cherche les musées dans le 31500"
+        resultatRechercheMusees = museeService.searchMusees(
+                "", "31500", "", "", "")
+
+        then:"on trouve les bons musées"
+        resultatRechercheMusees.size() == 3
+        resultatRechercheMusees.contains(unMusee)
+        resultatRechercheMusees.contains(unMuseeBis)
+        resultatRechercheMusees.contains(unMuseeTierce)
+        resultatRechercheMusees.clear()
+
+
+        when:"on cherche les musées dont l'acces au metro est Roseraie (A)"
+        resultatRechercheMusees = museeService.searchMusees(
+                "", "", "", "", "Roseraie (A)")
+
+        then:"on trouve les bon musées"
+        resultatRechercheMusees.size() == 3
+        resultatRechercheMusees.contains(unMusee)
+        resultatRechercheMusees.contains(unMuseeBis)
+        resultatRechercheMusees.contains(unMuseeTierce)
+        resultatRechercheMusees.clear()
+
+        when:"on cherche les musées dont l'acces au bus est 36, 38"
+        resultatRechercheMusees = museeService.searchMusees(
+                "", "", "", "36, 38", "")
+
+        then:"on trouve les bon musées"
+        resultatRechercheMusees.size() == 3
+        resultatRechercheMusees.contains(unMusee)
+        resultatRechercheMusees.contains(unMuseeBis)
+        resultatRechercheMusees.contains(unMuseeTierce)
+        resultatRechercheMusees.clear()
     }
 
 }
