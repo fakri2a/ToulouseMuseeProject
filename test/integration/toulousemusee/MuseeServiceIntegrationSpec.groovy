@@ -14,23 +14,16 @@ class MuseeServiceIntegrationSpec extends Specification {
     MuseeService museeService
 
     def setup() {
-    }
-
-    def cleanup() {
-    }
-
-    void "test insertion ou mise à jour d'un musee avec une adresse et un gestionnaire"() {
-
-        given: "une adresse"
+        unGestionnaire = new Gestionnaire(nom: "Mairie de Toulouse - DGA Culture")
         uneAdresse = new Adresse(numero: "2",
                 rue: "RUE DES ARCHIVES",
                 codePostal: 31500,
                 ville: "Toulouse")
+    }
 
-        and: "un gestionnaire"
-        unGestionnaire = new Gestionnaire(nom: "Mairie de Toulouse - DGA Culture")
+    void "test insertion ou mise à jour d'un musee avec une adresse et un gestionnaire"() {
 
-        and: "un musée"
+        given: "un musée"
         Musee unMusee = new Musee(nom: "ARCHIVES MUNICIPALES TOULOUSE",
                 gestionnaire: unGestionnaire,
                 horairesOuverture: "Ouvert du mardi au samedi de 13h à 19hfermé les dimanches, jours fériés et du 1er au 15 août",
@@ -40,6 +33,7 @@ class MuseeServiceIntegrationSpec extends Specification {
                 accesBus: "36, 38")
 
         when: "on tente de répercuter en base la création ou la modification du musée"
+
         Musee resultMusee = museeService.insertOrUpdateMusee(unMusee, uneAdresse, unGestionnaire)
 
         then: "le musée résultant pointe sur le musée initial"

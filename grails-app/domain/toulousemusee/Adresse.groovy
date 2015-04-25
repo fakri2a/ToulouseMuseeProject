@@ -6,6 +6,8 @@ class Adresse {
     int codePostal
     String ville
 
+    static hasOne = [musee: Musee]
+
     static constraints = {
         numero blank: true, nullable: true
         rue blank: false, nullable: false
