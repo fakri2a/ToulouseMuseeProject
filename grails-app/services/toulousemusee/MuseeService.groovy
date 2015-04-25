@@ -7,10 +7,19 @@ class MuseeService {
 
     boolean transactional = true
 
+    /**
+     * Insere ou met à jour unMusee dans la base de donnée.
+     * @param unMusee
+     * @param uneAdresse
+     * @param unGestionnaire
+     * @return
+     */
     Musee insertOrUpdateMusee(Musee unMusee, Adresse uneAdresse, Gestionnaire unGestionnaire) {
         unMusee.setAdresse(uneAdresse)
         unMusee.setGestionnaire(unGestionnaire)
-        unMusee.save()
+        uneAdresse.save(flush: true)
+        unGestionnaire.save(flush: true)
+        unMusee.save(flush: true)
 
         unMusee
     }

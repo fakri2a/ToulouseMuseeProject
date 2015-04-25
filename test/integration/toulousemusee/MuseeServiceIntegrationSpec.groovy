@@ -53,13 +53,27 @@ class MuseeServiceIntegrationSpec extends Specification {
 
         and:"le musée est bien presente en base"
         Musee.findById(resultMusee.id) != null
+    }
 
-        and: "l'activite a pour responsable le responsable passé en paramètre"
-        resultActivite.responsable == unResponsable
+    void "test suppression d'un musée"() {
+        given: "un musée existant en base"
+        Musee unMusee = new Musee(nom: "ARCHIVES MUNICIPALES TOULOUSE",
+                gestionnaire: unGestionnaire,
+                horairesOuverture: "Ouvert du mardi au samedi de 13h à 19hfermé les dimanches, jours fériés et du 1er au 15 août",
+                adresse: uneAdresse,
+                numeroTel: "05 61 61 63 33",
+                accesMetro: "Roseraie (A)",
+                accesBus: "36, 38")
 
-        and:"le responsable a dans sa liste d'activité l'activité passé en paramètre"
-        println ">>>>>>> classe pour activites : ${unResponsable.activites.class.name}"
-        unResponsable.activites.contains(resultActivite)
+        when:"on tente de supprimer le musee"
+        museeService.deleteMusee(unMusee)
+
+        then:"le musee n'existe plus en base"
+        Musee.findById(unMusee.id) == null
+    }
+
+    void "test recherche de musée(s)"() {
+
     }
 
 }
