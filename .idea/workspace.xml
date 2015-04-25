@@ -4,7 +4,6 @@
     <list default="true" id="9f3d245d-b1d8-43f8-af13-02339a0570a8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/services/toulousemusee/MuseeService.groovy" afterPath="$PROJECT_DIR$/grails-app/services/toulousemusee/MuseeService.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/toulousemusee/MuseeServiceIntegrationSpec.groovy" afterPath="$PROJECT_DIR$/test/integration/toulousemusee/MuseeServiceIntegrationSpec.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ToulouseMusee.iml" afterPath="$PROJECT_DIR$/ToulouseMusee.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ToulouseMusee.iws" />
@@ -45,21 +44,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MuseeServiceIntegrationSpec.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MuseeServiceIntegrationSpec.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/integration/toulousemusee/MuseeServiceIntegrationSpec.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45918366" vertical-offset="2106" max-vertical-offset="3078">
-              <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2164" max-vertical-offset="3060">
+              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MuseeService.groovy" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MuseeService.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/services/toulousemusee/MuseeService.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="1314">
-              <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+            <state vertical-scroll-proportion="-0.10204082" vertical-offset="688" max-vertical-offset="1314">
+              <caret line="36" column="77" selection-start-line="36" selection-start-column="77" selection-end-line="36" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -109,8 +108,8 @@
         <option value="$PROJECT_DIR$/grails-app/domain/toulousemusee/Adresse.groovy" />
         <option value="$PROJECT_DIR$/test/unit/toulousemusee/AdresseSpec.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/toulousemusee/Musee.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/services/toulousemusee/MuseeService.groovy" />
         <option value="$PROJECT_DIR$/test/integration/toulousemusee/MuseeServiceIntegrationSpec.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/services/toulousemusee/MuseeService.groovy" />
       </list>
     </option>
   </component>
@@ -652,7 +651,7 @@
       <workItem from="1429955688541" duration="16128000" />
       <workItem from="1429972613358" duration="6315000" />
       <workItem from="1429979015596" duration="4842000" />
-      <workItem from="1429985087496" duration="8228000" />
+      <workItem from="1429985087496" duration="8593000" />
     </task>
     <task id="LOCAL-00001" summary="classe domaine maj">
       <created>1428399754938</created>
@@ -702,11 +701,17 @@
       <option name="project" value="LOCAL" />
       <updated>1429965649999</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Test integration du service de musee : OK!!! (enfin!!!)">
+      <created>1429995013537</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1429995013537</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52601000" />
+    <option name="totallyTimeSpent" value="52966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="24" width="1539" height="876" extended-state="6" />
@@ -738,6 +743,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953784" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -745,7 +751,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -806,7 +811,8 @@
     <MESSAGE value="Test des classes Gestionnaire, Musee, Utilisateur" />
     <MESSAGE value="modification contrainte classe du domaine + test unitaire" />
     <MESSAGE value="Tests unitaires Ok!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests unitaires Ok!" />
+    <MESSAGE value="Test integration du service de musee : OK!!! (enfin!!!)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test integration du service de musee : OK!!! (enfin!!!)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1178,18 +1184,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/services/toulousemusee/MuseeService.groovy">
+    <entry file="file://$PROJECT_DIR$/test/integration/toulousemusee/MuseeServiceIntegrationSpec.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="688" max-vertical-offset="1314">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2164" max-vertical-offset="3060">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/integration/toulousemusee/MuseeServiceIntegrationSpec.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/services/toulousemusee/MuseeService.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45918366" vertical-offset="2106" max-vertical-offset="3078">
-          <caret line="127" column="8" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="8" />
+        <state vertical-scroll-proportion="-0.10204082" vertical-offset="688" max-vertical-offset="1314">
+          <caret line="36" column="77" selection-start-line="36" selection-start-column="77" selection-end-line="36" selection-end-column="77" />
           <folding />
         </state>
       </provider>
