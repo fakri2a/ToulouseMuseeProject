@@ -6,7 +6,7 @@ class Adresse {
     int codePostal
     String ville
 
-    static hasOne = [musee: Musee]
+    static belongsTo = [musee: Musee]
 
     static constraints = {
         numero blank: true, nullable: true

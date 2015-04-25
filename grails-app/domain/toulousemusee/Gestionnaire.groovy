@@ -9,11 +9,5 @@ class Gestionnaire {
         nom blank: false, nullable: false
     }
 
-    public setMusee(Musee m) {
-        this.musees << m
-        m.gestionnaire = this
-
-    }
-
 
 }

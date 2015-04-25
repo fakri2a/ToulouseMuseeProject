@@ -25,9 +25,9 @@ class MuseeServiceIntegrationSpec extends Specification {
 
         given: "un musée"
         Musee unMusee = new Musee(nom: "ARCHIVES MUNICIPALES TOULOUSE",
-                gestionnaire: unGestionnaire,
+                //gestionnaire: unGestionnaire,
                 horairesOuverture: "Ouvert du mardi au samedi de 13h à 19hfermé les dimanches, jours fériés et du 1er au 15 août",
-                adresse: uneAdresse,
+                //adresse: uneAdresse,
                 numeroTel: "05 61 61 63 33",
                 accesMetro: "Roseraie (A)",
                 accesBus: "36, 38")

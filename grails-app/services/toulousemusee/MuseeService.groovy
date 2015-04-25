@@ -17,6 +17,10 @@ class MuseeService {
     Musee insertOrUpdateMusee(Musee unMusee, Adresse uneAdresse, Gestionnaire unGestionnaire) {
         unMusee.setAdresse(uneAdresse)
         unMusee.setGestionnaire(unGestionnaire)
+
+        unGestionnaire.addToMusees(unMusee)
+        uneAdresse.setMusee(unMusee)
+
         uneAdresse.save(flush: true)
         unGestionnaire.save(flush: true)
         unMusee.save(flush: true)

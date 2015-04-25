@@ -25,11 +25,6 @@ class Musee {
         accessBus nullable: false, blank: true
     }
 
-    public setAdresse(Adresse uneAdresse) {
-        this.adresse = uneAdresse
-        uneAdresse.musee = this
-    }
-
     public String toString() {
         "${nom}"
     }
