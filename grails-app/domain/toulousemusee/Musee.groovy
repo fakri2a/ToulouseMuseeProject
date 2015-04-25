@@ -22,8 +22,8 @@ class Musee {
         nom nullable: false, blank: false
         horairesOuverture nullable: false, blank: false
         telephone nullable: false, blank: false
-        accessMetro nullable: false, blank: true
-        accessBus nullable: false, blank: true
+        accessMetro nullable: true, blank: true
+        accessBus nullable: true, blank: true
     }
 
     public String toString() {
