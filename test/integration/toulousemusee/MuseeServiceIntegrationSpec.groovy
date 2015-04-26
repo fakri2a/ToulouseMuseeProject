@@ -19,15 +19,15 @@ class MuseeServiceIntegrationSpec extends Specification {
         unGestionnaire = new Gestionnaire(nom: "Mairie de Toulouse - DGA Culture")
         uneAdresse = new Adresse(numero: "2",
                 rue: "RUE DES ARCHIVES UN",
-                codePostal: 31500,
+                codePostal: 31600,
                 ville: "Toulouse")
         uneAdresseBis = new Adresse(numero: "3",
                 rue: "RUE DES ARCHIVES BIS",
-                codePostal: 31500,
+                codePostal: 31600,
                 ville: "Toulouse")
         uneAdresseTierce = new Adresse(numero: "4",
                 rue: "RUE DES ARCHIVES TIERCE",
-                codePostal: 31500,
+                codePostal: 31600,
                 ville: "Toulouse")
     }
 
@@ -81,7 +81,7 @@ class MuseeServiceIntegrationSpec extends Specification {
 
     void "test recherche de musée(s)"() {
         given: "un jeu de test avec plusieurs musées"
-        Musee unMusee = new Musee(nom: "ARCHIVES MUNICIPALES TOULOUSE",
+        Musee unMusee = new Musee(nom: "ARCHIVES MUNICIPALES TOULOUSE UNO",
                 gestionnaire: unGestionnaire,
                 horairesOuverture: "Ouvert du mardi au samedi de 13h à 19hfermé les dimanches, jours fériés et du 1er au 15 août",
                 adresse: uneAdresse,
@@ -109,17 +109,20 @@ class MuseeServiceIntegrationSpec extends Specification {
 
         when:"on cherche les musées dont le nom est ARCHIVES MUNICIPALES TOULOUSE TIERCE"
         List<Musee> resultatRechercheMusees = museeService.searchMusees(
-                "ARCHIVES MUNICIPALES TOULOUSE", "", "", "", "")
+                "ARCHIVES MUNICIPALES TOULOUSE UNO", "", "")
 
-        then:"on trouve le bon musée"
+        then:"on trouve le bon nombre de musée"
         resultatRechercheMusees.size() == 1
+
+        and: "il s'agit du bon musée"
         resultatRechercheMusees.contains(unMusee)
+
         resultatRechercheMusees.clear()
 
 
         when:"on cherche les musées dont l'adresse est RUE DES ARCHIVES UN"
         resultatRechercheMusees = museeService.searchMusees(
-                "", "", "RUE DES ARCHIVES UN", "", "")
+                "", "", "RUE DES ARCHIVES UN")
 
         then:"on trouve le bon musée"
         resultatRechercheMusees.size() == 1
@@ -128,7 +131,7 @@ class MuseeServiceIntegrationSpec extends Specification {
 
         when:"on cherche les musées dans le 31500"
         resultatRechercheMusees = museeService.searchMusees(
-                "", "31500", "", "", "")
+                "", "31600", "")
 
         then:"on trouve les bons musées"
         resultatRechercheMusees.size() == 3
@@ -137,28 +140,6 @@ class MuseeServiceIntegrationSpec extends Specification {
         resultatRechercheMusees.contains(unMuseeTierce)
         resultatRechercheMusees.clear()
 
-
-        when:"on cherche les musées dont l'acces au metro est Roseraie (A)"
-        resultatRechercheMusees = museeService.searchMusees(
-                "", "", "", "", "Roseraie (A)")
-
-        then:"on trouve les bon musées"
-        resultatRechercheMusees.size() == 3
-        resultatRechercheMusees.contains(unMusee)
-        resultatRechercheMusees.contains(unMuseeBis)
-        resultatRechercheMusees.contains(unMuseeTierce)
-        resultatRechercheMusees.clear()
-
-        when:"on cherche les musées dont l'acces au bus est 36, 38"
-        resultatRechercheMusees = museeService.searchMusees(
-                "", "", "", "36, 38", "")
-
-        then:"on trouve les bon musées"
-        resultatRechercheMusees.size() == 3
-        resultatRechercheMusees.contains(unMusee)
-        resultatRechercheMusees.contains(unMuseeBis)
-        resultatRechercheMusees.contains(unMuseeTierce)
-        resultatRechercheMusees.clear()
     }
 
 }
