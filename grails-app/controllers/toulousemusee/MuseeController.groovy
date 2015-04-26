@@ -31,6 +31,10 @@ class MuseeController {
         respond Musee.list(params), model:[museeInstanceCount: Musee.count()]
 
     }
+    /**
+     *
+     * @return
+     */
     def ajouterFavoris() {
 
         ArrayList<String> listeFavoris = session.getAttribute("mesFavoris")
@@ -39,7 +43,10 @@ class MuseeController {
         session.setAttribute("mesFavoris",listeFavoris)
         render(view: 'index', model: [museeList: session.getAttribute("museeList")])
     }
-
+    /**
+     *
+     * @return
+     */
     def supprimerFavoris() {
         ArrayList<String> listeFavoris = session.getAttribute("mesFavoris")
         listeFavoris ? null : (listeFavoris = new ArrayList<String>())
