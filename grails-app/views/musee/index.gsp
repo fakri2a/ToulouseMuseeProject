@@ -6,17 +6,21 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'musee.label', default: 'Musee')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
+        <style type="text/css" media="screen">
+        body {
+            font-size:smaller;
+        }
+        </style>
 	</head>
 	<body>
 		<a href="#list-musee" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="Acceuil"/></a></li>
 			</ul>
 		</div>
 		<div id="list-musee" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<h1><g:message code="Musees" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -54,20 +58,18 @@
 
 						<td>${fieldValue(bean: museeInstance, field: "adresse")}</td>
 
-                        <g:if test="${!(((List) session.getAttribute("mesFavoris"))?.contains(museeInstance.nom))}">
+
                             <td><g:link action="ajouterFavoris" params="[nom: museeInstance.nom]"
                                         style="text-align: right"><input type="button" value="Ajouter à ma liste"
                                                                          class="button"/></g:link></td>
-                        </g:if>
+
 
 					</tr>
 				</g:each>
 				</tbody>
 			</table>
 
-            <div class="pagination">
-                <g:paginate total="${museeInstanceCount ?: 0}" max="5"/>
-            </div>
+
 
             <g:if test="${((List) session.getAttribute("mesFavoris"))?.size() > 0}">
                 <div>
@@ -91,6 +93,9 @@
                         </g:each>
 
                     </table>
+                </div>
+                <div class="pagination">
+                    <g:paginate total="${museeInstanceCount ?: 0}" max="5"/>
                 </div>
             </g:if>
 		</div>
