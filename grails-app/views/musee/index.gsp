@@ -53,23 +53,46 @@
 						<td>${fieldValue(bean: museeInstance, field: "accessBus")}</td>
 
 						<td>${fieldValue(bean: museeInstance, field: "adresse")}</td>
-                        <g:if test="${((List) session.getAttribute("pref"))?.contains(museeInstance.nom)}">
-                            <td><g:link action="addPref" controller="index" params="[nom: museeInstance.nom]"
-                                        style="text-align: right"><input type="button" value="Ajouter à ma liste des musées"
-                                                                         class="button" disabled/></g:link></td>
-                        </g:if>
-                        <g:else>
-                            <td><g:link action="addPref" controller="index" params="[nom: museeInstance.nom]"
-                                        style="text-align: right"><input type="button" value="Ajouter à ma liste des musées"
+
+                        <g:if test="${!(((List) session.getAttribute("mesFavoris"))?.contains(museeInstance.nom))}">
+                            <td><g:link action="ajouterFavoris" params="[nom: museeInstance.nom]"
+                                        style="text-align: right"><input type="button" value="Ajouter à ma liste"
                                                                          class="button"/></g:link></td>
-                        </g:else>
+                        </g:if>
+
 					</tr>
 				</g:each>
 				</tbody>
 			</table>
-			<div class="pagination">
-				<g:paginate total="${museeInstanceCount ?: 0}" />
-			</div>
+
+            <div class="pagination">
+                <g:paginate total="${museeInstanceCount ?: 0}" max="5"/>
+            </div>
+
+            <g:if test="${((List) session.getAttribute("mesFavoris"))?.size() > 0}">
+                <div>
+                    <h1>Ma liste de musees préférés</h1>
+                    <br/>
+                    <table>
+
+                        <g:each in="${session.getAttribute("mesFavoris")}" status="i" var="museeInstance">
+
+                            <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+                                <td>${museeInstance}</td>
+                                <td><g:link action="demandePref" controller="demandevisitemusee/index"  params="[nom: museeInstance]"
+                                            style="text-align: right"><input type="button" value="Demande de viste"></g:link>
+                                </td>
+                                <td><g:link action="supprimerFavoris"  params="[nom: museeInstance, from: 'musee/index']" style="text-align: right">
+                                    <input type="button" value="Supprimer"></g:link>
+                                </td>
+
+                            </tr>
+
+                        </g:each>
+
+                    </table>
+                </div>
+            </g:if>
 		</div>
 	</body>
 </html>

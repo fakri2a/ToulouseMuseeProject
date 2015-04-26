@@ -17,10 +17,10 @@ class MuseeController {
      *
      * @return
      */
-    def doSearchMusee() {
-
+    def doSearchMusee(Integer max) {
+        params.max = Math.min(max ?: 5, 100)
         def museeList = museeService.searchMusees(params.nom,params.codePostal, params.rue)
-        render(view: 'index', model: [museeInstanceList: museeList, museeInstanceCount: museeList.size()])
+        render(view: 'index', model: [museeInstanceList: museeList, museeInstanceCount: Musee.count()])
     }
     /**
      *
@@ -31,21 +31,21 @@ class MuseeController {
         respond Musee.list(params), model:[museeInstanceCount: Musee.count()]
 
     }
-    /**
-     *
-     * @return
-     */
-    def addToFavoris() {
-        Map favorisList = session.getAttribute('favoris')
-        if (request.post) {
-            if (!favorisList) {
-                favorisList = new HashMap()
-            }
-            favorisList.put(params.museeId as long, params.museeNom)
-            favorisList.sort {it.value}
-            session.setAttribute('favoris', favorisList)
-        }
-        render template: "favorislist"
+    def ajouterFavoris() {
+
+        ArrayList<String> listeFavoris = session.getAttribute("mesFavoris")
+        listeFavoris? null : (listeFavoris = new ArrayList<String>())
+        listeFavoris.contains(params.nom) ? false : listeFavoris.add(params.nom)
+        session.setAttribute("mesFavoris",listeFavoris)
+        render(view: 'index', model: [museeList: session.getAttribute("museeList")])
+    }
+
+    def supprimerFavoris() {
+        ArrayList<String> listeFavoris = session.getAttribute("mesFavoris")
+        listeFavoris ? null : (listeFavoris = new ArrayList<String>())
+        listeFavoris.remove(params.nom)
+        session.setAttribute("mesFavoris", listeFavoris)
+        render(view: ("/" + params.from), model: [museeList: session.getAttribute("museeList")])
     }
 
     /**
@@ -65,18 +65,7 @@ class MuseeController {
     def show(Musee museeInstance) {
         respond museeInstance
     }
-    /**
-     *
-     * @return
-     */
-    def deleteFromFavoris() {
-        Map favorisList = session.getAttribute('favoris')
-        if (request.post) {
-            favorisList.remove(params.museeId as long)
-            session.setAttribute('favoris', favorisList)
-        }
-        render template: "favorislist"
-    }
+
 
 
 

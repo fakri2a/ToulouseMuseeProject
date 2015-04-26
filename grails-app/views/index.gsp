@@ -47,7 +47,7 @@
 			h2 {
 				margin-top: 1em;
 				margin-bottom: 0.3em;
-				font-size: 1em;
+				font-size: 0.5em;
 			}
 
 			p {
@@ -72,6 +72,7 @@
 
 				#page-body {
 					margin: 0 1em 1em;
+                    font-size: 0.1em;
 				}
 
 				#page-body h1 {
