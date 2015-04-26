@@ -19,6 +19,11 @@ class Musee {
             demandeVisiteMusees: DemandeVisiteMusee
     ]
 
+    static mapping = {
+        gestionnaire fetch: 'join'
+        adresse fetch : 'join'
+    }
+
     static constraints = {
         nom nullable: false, blank: false
         horairesOuverture nullable: false, blank: false
