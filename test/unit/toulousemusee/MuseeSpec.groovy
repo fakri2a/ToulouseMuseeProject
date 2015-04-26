@@ -24,6 +24,8 @@ class MuseeSpec extends Specification {
         where:
         unNom       | unHoraireOuverture    | unTelephone   | unAccessMetro | unAccessBus   | unGestionnaire        | uneAdresse    | desDemandeVisiteMusee
         "Gravin"    | "7h00"                | "0615208172"  | "oui"         | "oui"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
+        "Gravin"    | "7h00"                | "0615208172"  | null          | "oui"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
+        "Gravin"    | "7h00"                | "0615208172"  | "oui"         | null          | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
 
 
 
@@ -48,8 +50,8 @@ class MuseeSpec extends Specification {
         "Gravin"    | null                  | "0615208172"  | "oui"         | "non"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
         "Gravin"    | "7h00"                | ""            | "oui"         | "oui"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
         "Gravin"    | "7h00"                | null          | "oui"         | "non"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
-        "Gravin"    | "7h00"                | "0615208172"  | null          | "oui"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
-        "Gravin"    | "7h00"                | "0615208172"  | "oui"         | null          | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
+        //"Gravin"    | "7h00"                | "0615208172"  | null          | "oui"         | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
+        //"Gravin"    | "7h00"                | "0615208172"  | "oui"         | null          | new Gestionnaire()    | new Adresse() | new HashSet<DemandeVisiteMusee>()
 
     }
 }
