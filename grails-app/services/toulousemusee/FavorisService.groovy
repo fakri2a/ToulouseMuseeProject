@@ -6,7 +6,6 @@ import grails.transaction.Transactional
 class FavorisService {
 
     boolean transactional = true
-    static scope = "session"
 
     List<Musee> museesFavoris
 
