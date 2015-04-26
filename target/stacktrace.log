@@ -6943,3 +6943,443 @@ java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on nu
 2015-04-26 15:00:44,788 [Thread-11] ERROR StackTrace  - Full Stack Trace:
 java.lang.NullPointerException: Cannot get property 'cacheOperationSource' on null object
 	at CacheGrailsPlugin$_closure4.doCall(CacheGrailsPlugin.groovy:184)
+2015-04-26 15:50:53,290 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method ajouterFavoris() on null object
+	at toulousemusee.FavorisServiceSpec.test ajout dans la liste des favoris(FavorisServiceSpec.groovy:38)
+2015-04-26 15:50:53,306 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method ajouterFavoris() on null object
+	at toulousemusee.FavorisServiceSpec.test ajout dans la liste des favoris(FavorisServiceSpec.groovy:38)
+2015-04-26 15:50:53,309 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method ajouterFavoris() on null object
+	at toulousemusee.FavorisServiceSpec.test ajout dans la liste des favoris(FavorisServiceSpec.groovy:38)
+2015-04-26 15:50:53,310 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method ajouterFavoris() on null object
+	at toulousemusee.FavorisServiceSpec.test ajout dans la liste des favoris(FavorisServiceSpec.groovy:38)
+2015-04-26 15:50:53,316 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method ajouterFavoris() on null object
+	at toulousemusee.FavorisServiceSpec.test ajout dans la liste des favoris(FavorisServiceSpec.groovy:38)
+2015-04-26 15:50:53,317 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method ajouterFavoris() on null object
+	at toulousemusee.FavorisServiceSpec.test ajout dans la liste des favoris(FavorisServiceSpec.groovy:38)
+2015-04-26 15:50:53,340 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method ajouterFavoris() on null object
+	at toulousemusee.FavorisServiceSpec.test enlever un musee de la liste des favoris(FavorisServiceSpec.groovy:58)
+2015-04-26 15:50:53,341 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method ajouterFavoris() on null object
+	at toulousemusee.FavorisServiceSpec.test enlever un musee de la liste des favoris(FavorisServiceSpec.groovy:58)
+2015-04-26 15:50:53,349 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method ajouterFavoris() on null object
+	at toulousemusee.FavorisServiceSpec.test enlever un musee de la liste des favoris(FavorisServiceSpec.groovy:58)
+2015-04-26 15:50:53,349 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method ajouterFavoris() on null object
+	at toulousemusee.FavorisServiceSpec.test enlever un musee de la liste des favoris(FavorisServiceSpec.groovy:58)
+2015-04-26 15:50:53,350 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method ajouterFavoris() on null object
+	at toulousemusee.FavorisServiceSpec.test enlever un musee de la liste des favoris(FavorisServiceSpec.groovy:58)
+2015-04-26 15:50:53,350 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method ajouterFavoris() on null object
+	at toulousemusee.FavorisServiceSpec.test enlever un musee de la liste des favoris(FavorisServiceSpec.groovy:58)
+2015-04-26 15:50:59,513 [main] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.CannotRedirectException: Cannot redirect for object [toulousemusee.DemandeVisite : (unsaved)] it is not a domain or has no identifier. Use an explicit redirect instead 
+	at org.codehaus.groovy.grails.plugins.web.api.ControllersApi.redirect(ControllersApi.java:273)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.GroovyObjectSupport.invokeMethod(GroovyObjectSupport.java:44)
+	at toulousemusee.DemandeVisiteController.tt__save_closure9_closure14(DemandeVisiteController.groovy:42)
+	at toulousemusee.DemandeVisiteController.tt__save_closure9_closure14(DemandeVisiteController.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:417)
+	at org.codehaus.groovy.grails.plugins.web.api.MimeTypesApiSupport.getResponseForFormat(MimeTypesApiSupport.groovy:142)
+	at org.codehaus.groovy.grails.plugins.web.api.MimeTypesApiSupport.withFormatInternal(MimeTypesApiSupport.groovy:57)
+	at org.codehaus.groovy.grails.plugins.web.api.MimeTypesApiSupport.withFormat(MimeTypesApiSupport.groovy:40)
+	at org.codehaus.groovy.grails.plugins.web.api.RequestMimeTypesApi.withFormat(RequestMimeTypesApi.groovy:95)
+	at toulousemusee.DemandeVisiteController.$tt__save(DemandeVisiteController.groovy:39)
+	at toulousemusee.DemandeVisiteController.save_closure4(DemandeVisiteController.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at toulousemusee.DemandeVisiteControllerSpec.Test the save action correctly persists an instance(DemandeVisiteControllerSpec.groovy:53)
+2015-04-26 15:50:59,513 [main] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.CannotRedirectException: Cannot redirect for object [toulousemusee.DemandeVisite : (unsaved)] it is not a domain or has no identifier. Use an explicit redirect instead 
+	at toulousemusee.DemandeVisiteController.tt__save_closure9_closure14(DemandeVisiteController.groovy:42)
+	at toulousemusee.DemandeVisiteController.$tt__save(DemandeVisiteController.groovy:39)
+	at toulousemusee.DemandeVisiteControllerSpec.Test the save action correctly persists an instance(DemandeVisiteControllerSpec.groovy:53)
+2015-04-26 15:50:59,515 [main] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.CannotRedirectException: Cannot redirect for object [toulousemusee.DemandeVisite : (unsaved)] it is not a domain or has no identifier. Use an explicit redirect instead 
+	at toulousemusee.DemandeVisiteController.tt__save_closure9_closure14(DemandeVisiteController.groovy:42)
+	at toulousemusee.DemandeVisiteController.$tt__save(DemandeVisiteController.groovy:39)
+	at toulousemusee.DemandeVisiteControllerSpec.Test the save action correctly persists an instance(DemandeVisiteControllerSpec.groovy:53)
+2015-04-26 15:50:59,515 [main] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.CannotRedirectException: Cannot redirect for object [toulousemusee.DemandeVisite : (unsaved)] it is not a domain or has no identifier. Use an explicit redirect instead 
+	at toulousemusee.DemandeVisiteController.tt__save_closure9_closure14(DemandeVisiteController.groovy:42)
+	at toulousemusee.DemandeVisiteController.$tt__save(DemandeVisiteController.groovy:39)
+	at toulousemusee.DemandeVisiteControllerSpec.Test the save action correctly persists an instance(DemandeVisiteControllerSpec.groovy:53)
+2015-04-26 15:50:59,515 [main] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.CannotRedirectException: Cannot redirect for object [toulousemusee.DemandeVisite : (unsaved)] it is not a domain or has no identifier. Use an explicit redirect instead 
+	at toulousemusee.DemandeVisiteController.tt__save_closure9_closure14(DemandeVisiteController.groovy:42)
+	at toulousemusee.DemandeVisiteController.$tt__save(DemandeVisiteController.groovy:39)
+	at toulousemusee.DemandeVisiteControllerSpec.Test the save action correctly persists an instance(DemandeVisiteControllerSpec.groovy:53)
+2015-04-26 15:50:59,516 [main] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.web.servlet.mvc.exceptions.CannotRedirectException: Cannot redirect for object [toulousemusee.DemandeVisite : (unsaved)] it is not a domain or has no identifier. Use an explicit redirect instead 
+	at toulousemusee.DemandeVisiteController.tt__save_closure9_closure14(DemandeVisiteController.groovy:42)
+	at toulousemusee.DemandeVisiteController.$tt__save(DemandeVisiteController.groovy:39)
+	at toulousemusee.DemandeVisiteControllerSpec.Test the save action correctly persists an instance(DemandeVisiteControllerSpec.groovy:53)
+2015-04-26 15:50:59,760 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'id' on null object
+	at toulousemusee.DemandeVisiteControllerSpec.Test the update action performs an update on a valid domain instance(DemandeVisiteControllerSpec.groovy:121)
+2015-04-26 15:50:59,760 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'id' on null object
+	at toulousemusee.DemandeVisiteControllerSpec.Test the update action performs an update on a valid domain instance(DemandeVisiteControllerSpec.groovy:121)
+2015-04-26 15:50:59,761 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'id' on null object
+	at toulousemusee.DemandeVisiteControllerSpec.Test the update action performs an update on a valid domain instance(DemandeVisiteControllerSpec.groovy:121)
+2015-04-26 15:50:59,761 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'id' on null object
+	at toulousemusee.DemandeVisiteControllerSpec.Test the update action performs an update on a valid domain instance(DemandeVisiteControllerSpec.groovy:121)
+2015-04-26 15:50:59,761 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'id' on null object
+	at toulousemusee.DemandeVisiteControllerSpec.Test the update action performs an update on a valid domain instance(DemandeVisiteControllerSpec.groovy:121)
+2015-04-26 15:50:59,762 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot get property 'id' on null object
+	at toulousemusee.DemandeVisiteControllerSpec.Test the update action performs an update on a valid domain instance(DemandeVisiteControllerSpec.groovy:121)
+2015-04-26 15:50:59,821 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+DemandeVisite.count() == 1
+              |       |
+              0       false
+
+	at toulousemusee.DemandeVisiteControllerSpec.Test that the delete action deletes an instance if it exists(DemandeVisiteControllerSpec.groovy:141)
+2015-04-26 15:50:59,824 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+DemandeVisite.count() == 1
+              |       |
+              0       false
+
+	at toulousemusee.DemandeVisiteControllerSpec.Test that the delete action deletes an instance if it exists(DemandeVisiteControllerSpec.groovy:141)
+2015-04-26 15:50:59,824 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+DemandeVisite.count() == 1
+              |       |
+              0       false
+
+	at toulousemusee.DemandeVisiteControllerSpec.Test that the delete action deletes an instance if it exists(DemandeVisiteControllerSpec.groovy:141)
+2015-04-26 15:50:59,825 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+DemandeVisite.count() == 1
+              |       |
+              0       false
+
+	at toulousemusee.DemandeVisiteControllerSpec.Test that the delete action deletes an instance if it exists(DemandeVisiteControllerSpec.groovy:141)
+2015-04-26 15:50:59,825 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+DemandeVisite.count() == 1
+              |       |
+              0       false
+
+	at toulousemusee.DemandeVisiteControllerSpec.Test that the delete action deletes an instance if it exists(DemandeVisiteControllerSpec.groovy:141)
+2015-04-26 15:50:59,825 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+DemandeVisite.count() == 1
+              |       |
+              0       false
+
+	at toulousemusee.DemandeVisiteControllerSpec.Test that the delete action deletes an instance if it exists(DemandeVisiteControllerSpec.groovy:141)
+2015-04-26 15:51:00,270 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:130)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at toulousemusee.FavorisController.$tt__ajouterAuxFavoris(FavorisController.groovy:19)
+	at toulousemusee.FavorisController.ajouterAuxFavoris_closure1(FavorisController.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at toulousemusee.FavorisControllerSpec.test ajout dans la liste des favoris(FavorisControllerSpec.groovy:40)
+2015-04-26 15:51:00,270 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at toulousemusee.FavorisController.$tt__ajouterAuxFavoris(FavorisController.groovy:19)
+	at toulousemusee.FavorisControllerSpec.test ajout dans la liste des favoris(FavorisControllerSpec.groovy:40)
+2015-04-26 15:51:00,271 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at toulousemusee.FavorisController.$tt__ajouterAuxFavoris(FavorisController.groovy:19)
+	at toulousemusee.FavorisControllerSpec.test ajout dans la liste des favoris(FavorisControllerSpec.groovy:40)
+2015-04-26 15:51:00,271 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at toulousemusee.FavorisController.$tt__ajouterAuxFavoris(FavorisController.groovy:19)
+	at toulousemusee.FavorisControllerSpec.test ajout dans la liste des favoris(FavorisControllerSpec.groovy:40)
+2015-04-26 15:51:00,271 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at toulousemusee.FavorisController.$tt__ajouterAuxFavoris(FavorisController.groovy:19)
+	at toulousemusee.FavorisControllerSpec.test ajout dans la liste des favoris(FavorisControllerSpec.groovy:40)
+2015-04-26 15:51:00,271 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at toulousemusee.FavorisController.$tt__ajouterAuxFavoris(FavorisController.groovy:19)
+	at toulousemusee.FavorisControllerSpec.test ajout dans la liste des favoris(FavorisControllerSpec.groovy:40)
+2015-04-26 15:51:00,369 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:130)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at toulousemusee.FavorisController.$tt__ajouterAuxFavoris(FavorisController.groovy:19)
+	at toulousemusee.FavorisController.ajouterAuxFavoris_closure1(FavorisController.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at toulousemusee.FavorisControllerSpec.test enlever un musee de la liste des favoris(FavorisControllerSpec.groovy:51)
+2015-04-26 15:51:00,370 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at toulousemusee.FavorisController.$tt__ajouterAuxFavoris(FavorisController.groovy:19)
+	at toulousemusee.FavorisControllerSpec.test enlever un musee de la liste des favoris(FavorisControllerSpec.groovy:51)
+2015-04-26 15:51:00,371 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at toulousemusee.FavorisController.$tt__ajouterAuxFavoris(FavorisController.groovy:19)
+	at toulousemusee.FavorisControllerSpec.test enlever un musee de la liste des favoris(FavorisControllerSpec.groovy:51)
+2015-04-26 15:51:00,372 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at toulousemusee.FavorisController.$tt__ajouterAuxFavoris(FavorisController.groovy:19)
+	at toulousemusee.FavorisControllerSpec.test enlever un musee de la liste des favoris(FavorisControllerSpec.groovy:51)
+2015-04-26 15:51:00,373 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at toulousemusee.FavorisController.$tt__ajouterAuxFavoris(FavorisController.groovy:19)
+	at toulousemusee.FavorisControllerSpec.test enlever un musee de la liste des favoris(FavorisControllerSpec.groovy:51)
+2015-04-26 15:51:00,373 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException
+	at toulousemusee.FavorisController.$tt__ajouterAuxFavoris(FavorisController.groovy:19)
+	at toulousemusee.FavorisControllerSpec.test enlever un musee de la liste des favoris(FavorisControllerSpec.groovy:51)
+2015-04-26 15:51:00,882 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+musee.validate() == false
+|     |          |
+|     true       false
+Gravin
+
+	at toulousemusee.MuseeSpec.test l'invalidite d'un Musee non valide(MuseeSpec.groovy:41)
+2015-04-26 15:51:00,882 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+musee.validate() == false
+|     |          |
+|     true       false
+Gravin
+
+	at toulousemusee.MuseeSpec.test l'invalidite d'un Musee non valide(MuseeSpec.groovy:41)
+2015-04-26 15:51:00,884 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+musee.validate() == false
+|     |          |
+|     true       false
+Gravin
+
+	at toulousemusee.MuseeSpec.test l'invalidite d'un Musee non valide(MuseeSpec.groovy:41)
+2015-04-26 15:51:00,884 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+musee.validate() == false
+|     |          |
+|     true       false
+Gravin
+
+	at toulousemusee.MuseeSpec.test l'invalidite d'un Musee non valide(MuseeSpec.groovy:41)
+2015-04-26 15:51:00,884 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+musee.validate() == false
+|     |          |
+|     true       false
+Gravin
+
+	at toulousemusee.MuseeSpec.test l'invalidite d'un Musee non valide(MuseeSpec.groovy:41)
+2015-04-26 15:51:00,885 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+musee.validate() == false
+|     |          |
+|     true       false
+Gravin
+
+	at toulousemusee.MuseeSpec.test l'invalidite d'un Musee non valide(MuseeSpec.groovy:41)
+2015-04-26 15:51:00,911 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+musee.validate() == false
+|     |          |
+|     true       false
+Gravin
+
+	at toulousemusee.MuseeSpec.test l'invalidite d'un Musee non valide(MuseeSpec.groovy:41)
+2015-04-26 15:51:00,911 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+musee.validate() == false
+|     |          |
+|     true       false
+Gravin
+
+	at toulousemusee.MuseeSpec.test l'invalidite d'un Musee non valide(MuseeSpec.groovy:41)
+2015-04-26 15:51:00,912 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+musee.validate() == false
+|     |          |
+|     true       false
+Gravin
+
+	at toulousemusee.MuseeSpec.test l'invalidite d'un Musee non valide(MuseeSpec.groovy:41)
+2015-04-26 15:51:00,912 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+musee.validate() == false
+|     |          |
+|     true       false
+Gravin
+
+	at toulousemusee.MuseeSpec.test l'invalidite d'un Musee non valide(MuseeSpec.groovy:41)
+2015-04-26 15:51:00,912 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+musee.validate() == false
+|     |          |
+|     true       false
+Gravin
+
+	at toulousemusee.MuseeSpec.test l'invalidite d'un Musee non valide(MuseeSpec.groovy:41)
+2015-04-26 15:51:00,912 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+musee.validate() == false
+|     |          |
+|     true       false
+Gravin
+
+	at toulousemusee.MuseeSpec.test l'invalidite d'un Musee non valide(MuseeSpec.groovy:41)
+2015-04-26 15:51:16,688 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method contains() on null object
+	at toulousemusee.FavorisService.$tt__ajouterFavoris(FavorisService.groovy:13)
+	at toulousemusee.FavorisService.ajouterFavoris_closure1(FavorisService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at toulousemusee.FavorisServiceIntegrationSpec.test ajout dans la liste des favoris(FavorisServiceIntegrationSpec.groovy:37)
+2015-04-26 15:51:16,689 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method contains() on null object
+	at toulousemusee.FavorisService.$tt__ajouterFavoris(FavorisService.groovy:13)
+	at toulousemusee.FavorisServiceIntegrationSpec.test ajout dans la liste des favoris(FavorisServiceIntegrationSpec.groovy:37)
+2015-04-26 15:51:16,689 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method contains() on null object
+	at toulousemusee.FavorisService.$tt__ajouterFavoris(FavorisService.groovy:13)
+	at toulousemusee.FavorisServiceIntegrationSpec.test ajout dans la liste des favoris(FavorisServiceIntegrationSpec.groovy:37)
+2015-04-26 15:51:16,689 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method contains() on null object
+	at toulousemusee.FavorisService.$tt__ajouterFavoris(FavorisService.groovy:13)
+	at toulousemusee.FavorisServiceIntegrationSpec.test ajout dans la liste des favoris(FavorisServiceIntegrationSpec.groovy:37)
+2015-04-26 15:51:16,689 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method contains() on null object
+	at toulousemusee.FavorisService.$tt__ajouterFavoris(FavorisService.groovy:13)
+	at toulousemusee.FavorisServiceIntegrationSpec.test ajout dans la liste des favoris(FavorisServiceIntegrationSpec.groovy:37)
+2015-04-26 15:51:16,690 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method contains() on null object
+	at toulousemusee.FavorisService.$tt__ajouterFavoris(FavorisService.groovy:13)
+	at toulousemusee.FavorisServiceIntegrationSpec.test ajout dans la liste des favoris(FavorisServiceIntegrationSpec.groovy:37)
+2015-04-26 15:51:16,704 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method contains() on null object
+	at toulousemusee.FavorisService.$tt__ajouterFavoris(FavorisService.groovy:13)
+	at toulousemusee.FavorisService.ajouterFavoris_closure1(FavorisService.groovy)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:439)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate$2.doInTransaction(GrailsTransactionTemplate.groovy:88)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:133)
+	at org.codehaus.groovy.grails.orm.support.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:85)
+	at toulousemusee.FavorisServiceIntegrationSpec.test enlever un musee de la liste des favoris(FavorisServiceIntegrationSpec.groovy:65)
+2015-04-26 15:51:16,704 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method contains() on null object
+	at toulousemusee.FavorisService.$tt__ajouterFavoris(FavorisService.groovy:13)
+	at toulousemusee.FavorisServiceIntegrationSpec.test enlever un musee de la liste des favoris(FavorisServiceIntegrationSpec.groovy:65)
+2015-04-26 15:51:16,704 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method contains() on null object
+	at toulousemusee.FavorisService.$tt__ajouterFavoris(FavorisService.groovy:13)
+	at toulousemusee.FavorisServiceIntegrationSpec.test enlever un musee de la liste des favoris(FavorisServiceIntegrationSpec.groovy:65)
+2015-04-26 15:51:16,704 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method contains() on null object
+	at toulousemusee.FavorisService.$tt__ajouterFavoris(FavorisService.groovy:13)
+	at toulousemusee.FavorisServiceIntegrationSpec.test enlever un musee de la liste des favoris(FavorisServiceIntegrationSpec.groovy:65)
+2015-04-26 15:51:16,705 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method contains() on null object
+	at toulousemusee.FavorisService.$tt__ajouterFavoris(FavorisService.groovy:13)
+	at toulousemusee.FavorisServiceIntegrationSpec.test enlever un musee de la liste des favoris(FavorisServiceIntegrationSpec.groovy:65)
+2015-04-26 15:51:16,705 [main] ERROR StackTrace  - Full Stack Trace:
+java.lang.NullPointerException: Cannot invoke method contains() on null object
+	at toulousemusee.FavorisService.$tt__ajouterFavoris(FavorisService.groovy:13)
+	at toulousemusee.FavorisServiceIntegrationSpec.test enlever un musee de la liste des favoris(FavorisServiceIntegrationSpec.groovy:65)
+2015-04-26 15:51:16,972 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+Musee.list().size() == 12
+      |      |      |
+      |      24     false
+      [ARCHIVES MUNICIPALES TOULOUSE, CMAV - CENTRE MERIDIONAL DE L'ARCHITECTURE DE LA VILLE, ENSEMBLE CONVENTUEL DES JACOBINS, INSTITUT CATHOLIQUE DE TOULOUSE - ESPACE MUSEOGRAPHIQUE BACCRABERE - SALLE TOLOSA, L'AEROTHEQUE, MUSEE DE L'HISTOIRE DE LA MEDECINE DE TOULOUSE, MUSEE DES AUGUSTINS - MUSEE DES BEAUX ARTS DE TOULOUSE, MUSEE DES COMPAGNONS, MUSEE DES INSTRUMENTS DE MEDECINE DES HOPITAUX DE TOULOUSE, MUSEE DU VIEUX TOULOUSE, MUSEE GEORGES-LABIT, MUSEE PAUL-DUPUY - ARTS GRAPHIQUES ET ARTS DECORATIFS, ARCHIVES MUNICIPALES TOULOUSE, CMAV - CENTRE MERIDIONAL DE L'ARCHITECTURE DE LA VILLE, ENSEMBLE CONVENTUEL DES JACOBINS, INSTITUT CATHOLIQUE DE TOULOUSE - ESPACE MUSEOGRAPHIQUE BACCRABERE - SALLE TOLOSA, L'AEROTHEQUE, MUSEE DE L'HISTOIRE DE LA MEDECINE DE TOULOUSE, MUSEE DES AUGUSTINS - MUSEE DES BEAUX ARTS DE TOULOUSE, MUSEE DES COMPAGNONS, MUSEE DES INSTRUMENTS DE MEDECINE DES HOPITAUX DE TOULOUSE, MUSEE DU VIEUX TOULOUSE, MUSEE GEORGES-LABIT, MUSEE PAUL-DUPUY - ARTS GRAPHIQUES ET ARTS DECORATIFS]
+
+	at toulousemusee.ParseurCsvServiceIntegrationSpec.test parseur du csv(ParseurCsvServiceIntegrationSpec.groovy:22)
+2015-04-26 15:51:16,972 [main] ERROR StackTrace  - Full Stack Trace:
+Condition not satisfied:
+
+Musee.list().size() == 12
+      |      |      |
+      |      24     false
+      [ARCHIVES MUNICIPALES TOULOUSE, CMAV - CENTRE MERIDIONAL DE L'ARCHITECTURE DE LA VILLE, ENSEMBLE CONVENTUEL DES JACOBINS, INSTITUT CATHOLIQUE DE TOULOUSE - ESPACE MUSEOGRAPHIQUE BACCRABERE - SALLE TOLOSA, L'AEROTHEQUE, MUSEE DE L'HISTOIRE DE LA MEDECINE DE TOULOUSE, MUSEE DES AUGUSTINS - MUSEE DES BEAUX ARTS DE TOULOUSE, MUSEE DES COMPAGNONS, MUSEE DES INSTRUMENTS DE MEDECINE DES HOPITAUX DE TOULOUSE, MUSEE DU VIEUX TOULOUSE, MUSEE GEORGES-LABIT, MUSEE PAUL-DUPUY - ARTS GRAPHIQUES ET ARTS DECORATIFS, ARCHIVES MUNICIPALES TOULOUSE, CMAV - CENTRE MERIDIONAL DE L'ARCHITECTURE DE LA VILLE, ENSEMBLE CONVENTUEL DES JACOBINS, INSTITUT CATHOLIQUE DE TOULOUSE - ESPACE MUSEOGRAPHIQUE BACCRABERE - SALLE TOLOSA, L'AEROTHEQUE, MUSEE DE L'HISTOIRE DE LA MEDECINE DE TOULOUSE, MUSEE DES AUGUSTINS - MUSEE DES BEAUX ARTS DE TOULOUSE, MUSEE DES COMPAGNONS, MUSEE DES INSTRUMENTS DE MEDECINE DES HOPITAUX DE TOULOUSE, MUSEE DU VIEUX TOULOUSE, MUSEE GEORGES-LABIT, MUSEE PAUL-DUPUY - ARTS GRAPHIQUES ET ARTS DECORATIFS]
+
+	at toulousemusee.ParseurCsvServiceIntegrationSpec.test parseur du csv(ParseurCsvServiceIntegrationSpec.groovy:22)
+2015-04-26 15:51:16,973 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+Musee.list().size() == 12
+      |      |      |
+      |      24     false
+      [ARCHIVES MUNICIPALES TOULOUSE, CMAV - CENTRE MERIDIONAL DE L'ARCHITECTURE DE LA VILLE, ENSEMBLE CONVENTUEL DES JACOBINS, INSTITUT CATHOLIQUE DE TOULOUSE - ESPACE MUSEOGRAPHIQUE BACCRABERE - SALLE TOLOSA, L'AEROTHEQUE, MUSEE DE L'HISTOIRE DE LA MEDECINE DE TOULOUSE, MUSEE DES AUGUSTINS - MUSEE DES BEAUX ARTS DE TOULOUSE, MUSEE DES COMPAGNONS, MUSEE DES INSTRUMENTS DE MEDECINE DES HOPITAUX DE TOULOUSE, MUSEE DU VIEUX TOULOUSE, MUSEE GEORGES-LABIT, MUSEE PAUL-DUPUY - ARTS GRAPHIQUES ET ARTS DECORATIFS, ARCHIVES MUNICIPALES TOULOUSE, CMAV - CENTRE MERIDIONAL DE L'ARCHITECTURE DE LA VILLE, ENSEMBLE CONVENTUEL DES JACOBINS, INSTITUT CATHOLIQUE DE TOULOUSE - ESPACE MUSEOGRAPHIQUE BACCRABERE - SALLE TOLOSA, L'AEROTHEQUE, MUSEE DE L'HISTOIRE DE LA MEDECINE DE TOULOUSE, MUSEE DES AUGUSTINS - MUSEE DES BEAUX ARTS DE TOULOUSE, MUSEE DES COMPAGNONS, MUSEE DES INSTRUMENTS DE MEDECINE DES HOPITAUX DE TOULOUSE, MUSEE DU VIEUX TOULOUSE, MUSEE GEORGES-LABIT, MUSEE PAUL-DUPUY - ARTS GRAPHIQUES ET ARTS DECORATIFS]
+
+	at toulousemusee.ParseurCsvServiceIntegrationSpec.test parseur du csv(ParseurCsvServiceIntegrationSpec.groovy:22)
+2015-04-26 15:51:16,973 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+Musee.list().size() == 12
+      |      |      |
+      |      24     false
+      [ARCHIVES MUNICIPALES TOULOUSE, CMAV - CENTRE MERIDIONAL DE L'ARCHITECTURE DE LA VILLE, ENSEMBLE CONVENTUEL DES JACOBINS, INSTITUT CATHOLIQUE DE TOULOUSE - ESPACE MUSEOGRAPHIQUE BACCRABERE - SALLE TOLOSA, L'AEROTHEQUE, MUSEE DE L'HISTOIRE DE LA MEDECINE DE TOULOUSE, MUSEE DES AUGUSTINS - MUSEE DES BEAUX ARTS DE TOULOUSE, MUSEE DES COMPAGNONS, MUSEE DES INSTRUMENTS DE MEDECINE DES HOPITAUX DE TOULOUSE, MUSEE DU VIEUX TOULOUSE, MUSEE GEORGES-LABIT, MUSEE PAUL-DUPUY - ARTS GRAPHIQUES ET ARTS DECORATIFS, ARCHIVES MUNICIPALES TOULOUSE, CMAV - CENTRE MERIDIONAL DE L'ARCHITECTURE DE LA VILLE, ENSEMBLE CONVENTUEL DES JACOBINS, INSTITUT CATHOLIQUE DE TOULOUSE - ESPACE MUSEOGRAPHIQUE BACCRABERE - SALLE TOLOSA, L'AEROTHEQUE, MUSEE DE L'HISTOIRE DE LA MEDECINE DE TOULOUSE, MUSEE DES AUGUSTINS - MUSEE DES BEAUX ARTS DE TOULOUSE, MUSEE DES COMPAGNONS, MUSEE DES INSTRUMENTS DE MEDECINE DES HOPITAUX DE TOULOUSE, MUSEE DU VIEUX TOULOUSE, MUSEE GEORGES-LABIT, MUSEE PAUL-DUPUY - ARTS GRAPHIQUES ET ARTS DECORATIFS]
+
+	at toulousemusee.ParseurCsvServiceIntegrationSpec.test parseur du csv(ParseurCsvServiceIntegrationSpec.groovy:22)
+2015-04-26 15:51:16,974 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+Musee.list().size() == 12
+      |      |      |
+      |      24     false
+      [ARCHIVES MUNICIPALES TOULOUSE, CMAV - CENTRE MERIDIONAL DE L'ARCHITECTURE DE LA VILLE, ENSEMBLE CONVENTUEL DES JACOBINS, INSTITUT CATHOLIQUE DE TOULOUSE - ESPACE MUSEOGRAPHIQUE BACCRABERE - SALLE TOLOSA, L'AEROTHEQUE, MUSEE DE L'HISTOIRE DE LA MEDECINE DE TOULOUSE, MUSEE DES AUGUSTINS - MUSEE DES BEAUX ARTS DE TOULOUSE, MUSEE DES COMPAGNONS, MUSEE DES INSTRUMENTS DE MEDECINE DES HOPITAUX DE TOULOUSE, MUSEE DU VIEUX TOULOUSE, MUSEE GEORGES-LABIT, MUSEE PAUL-DUPUY - ARTS GRAPHIQUES ET ARTS DECORATIFS, ARCHIVES MUNICIPALES TOULOUSE, CMAV - CENTRE MERIDIONAL DE L'ARCHITECTURE DE LA VILLE, ENSEMBLE CONVENTUEL DES JACOBINS, INSTITUT CATHOLIQUE DE TOULOUSE - ESPACE MUSEOGRAPHIQUE BACCRABERE - SALLE TOLOSA, L'AEROTHEQUE, MUSEE DE L'HISTOIRE DE LA MEDECINE DE TOULOUSE, MUSEE DES AUGUSTINS - MUSEE DES BEAUX ARTS DE TOULOUSE, MUSEE DES COMPAGNONS, MUSEE DES INSTRUMENTS DE MEDECINE DES HOPITAUX DE TOULOUSE, MUSEE DU VIEUX TOULOUSE, MUSEE GEORGES-LABIT, MUSEE PAUL-DUPUY - ARTS GRAPHIQUES ET ARTS DECORATIFS]
+
+	at toulousemusee.ParseurCsvServiceIntegrationSpec.test parseur du csv(ParseurCsvServiceIntegrationSpec.groovy:22)
+2015-04-26 15:51:16,974 [main] ERROR StackTrace  - Full Stack Trace:
+junit.framework.AssertionFailedError: Condition not satisfied:
+
+Musee.list().size() == 12
+      |      |      |
+      |      24     false
+      [ARCHIVES MUNICIPALES TOULOUSE, CMAV - CENTRE MERIDIONAL DE L'ARCHITECTURE DE LA VILLE, ENSEMBLE CONVENTUEL DES JACOBINS, INSTITUT CATHOLIQUE DE TOULOUSE - ESPACE MUSEOGRAPHIQUE BACCRABERE - SALLE TOLOSA, L'AEROTHEQUE, MUSEE DE L'HISTOIRE DE LA MEDECINE DE TOULOUSE, MUSEE DES AUGUSTINS - MUSEE DES BEAUX ARTS DE TOULOUSE, MUSEE DES COMPAGNONS, MUSEE DES INSTRUMENTS DE MEDECINE DES HOPITAUX DE TOULOUSE, MUSEE DU VIEUX TOULOUSE, MUSEE GEORGES-LABIT, MUSEE PAUL-DUPUY - ARTS GRAPHIQUES ET ARTS DECORATIFS, ARCHIVES MUNICIPALES TOULOUSE, CMAV - CENTRE MERIDIONAL DE L'ARCHITECTURE DE LA VILLE, ENSEMBLE CONVENTUEL DES JACOBINS, INSTITUT CATHOLIQUE DE TOULOUSE - ESPACE MUSEOGRAPHIQUE BACCRABERE - SALLE TOLOSA, L'AEROTHEQUE, MUSEE DE L'HISTOIRE DE LA MEDECINE DE TOULOUSE, MUSEE DES AUGUSTINS - MUSEE DES BEAUX ARTS DE TOULOUSE, MUSEE DES COMPAGNONS, MUSEE DES INSTRUMENTS DE MEDECINE DES HOPITAUX DE TOULOUSE, MUSEE DU VIEUX TOULOUSE, MUSEE GEORGES-LABIT, MUSEE PAUL-DUPUY - ARTS GRAPHIQUES ET ARTS DECORATIFS]
+
+	at toulousemusee.ParseurCsvServiceIntegrationSpec.test parseur du csv(ParseurCsvServiceIntegrationSpec.groovy:22)
