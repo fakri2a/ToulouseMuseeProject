@@ -81,8 +81,9 @@
 
                             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
                                 <td>${museeInstance}</td>
-                                <td><g:link action="demandePref" controller="demandevisitemusee/index"  params="[nom: museeInstance]"
-                                            style="text-align: right"><input type="button" value="Demande de viste"></g:link>
+                                <td><g:link url="[controller: 'demandeVisite', action: 'create']">
+                                    <input type="button" value="Faire une demande"/>
+                                </g:link>
                                 </td>
                                 <td><g:link action="supprimerFavoris"  params="[nom: museeInstance, from: 'musee/index']" style="text-align: right">
                                     <input type="button" value="Supprimer"></g:link>
@@ -93,6 +94,20 @@
                         </g:each>
 
                     </table>
+
+                    <tbody>
+                    <g:each in="${demandeVisiteMuseeInstanceList}" status="i" var="demandeVisiteMuseeInstance">
+                        <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+
+                            <td><g:link action="show" id="${demandeVisiteMuseeInstance.id}">${fieldValue(bean: demandeVisiteMuseeInstance, field: "dateDemande")}</g:link></td>
+
+                            <td>${fieldValue(bean: demandeVisiteMuseeInstance, field: "demandeVisite")}</td>
+
+                            <td>${fieldValue(bean: demandeVisiteMuseeInstance, field: "musee")}</td>
+
+                        </tr>
+                    </g:each>
+                    </tbody>
                 </div>
                 <div class="pagination">
                     <g:paginate total="${museeInstanceCount ?: 0}" max="5"/>
