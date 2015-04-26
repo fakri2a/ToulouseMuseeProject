@@ -2,5 +2,10 @@ package toulousemusee
 
 class IndexController {
 
-    def index() {}
+    MuseeService museeService
+
+
+    def index() {
+
+    }
 }
