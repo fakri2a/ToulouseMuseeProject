@@ -11,7 +11,7 @@ class DemandeVisite {
         codeVisite nullable: false, blank: false, unique: true
         debutPeriode nullable: false
         finPeriode nullable: false
-        nbPersonne min: 1
+        nbPersonne min: 1, max:6
         statut nullable: false
     }
 

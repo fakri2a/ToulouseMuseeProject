@@ -53,7 +53,16 @@
 						<td>${fieldValue(bean: museeInstance, field: "accessBus")}</td>
 
 						<td>${fieldValue(bean: museeInstance, field: "adresse")}</td>
-
+                        <g:if test="${((List) session.getAttribute("pref"))?.contains(museeInstance.nom)}">
+                            <td><g:link action="addPref" controller="index" params="[nom: museeInstance.nom]"
+                                        style="text-align: right"><input type="button" value="Ajouter à ma liste des musées"
+                                                                         class="button" disabled/></g:link></td>
+                        </g:if>
+                        <g:else>
+                            <td><g:link action="addPref" controller="index" params="[nom: museeInstance.nom]"
+                                        style="text-align: right"><input type="button" value="Ajouter à ma liste des musées"
+                                                                         class="button"/></g:link></td>
+                        </g:else>
 					</tr>
 				</g:each>
 				</tbody>

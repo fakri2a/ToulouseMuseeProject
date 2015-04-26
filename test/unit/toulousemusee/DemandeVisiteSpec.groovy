@@ -22,9 +22,9 @@ class DemandeVisiteSpec extends Specification {
 
         where:
         unCode    | uneDateDebut                |    uneDateFin              |  unNombre                 |  unStatut
-        "50"      | new Date(2015,12,05)        |    new Date(2015,12,15)    |  10                       |   "En cours de traitement"
+        "50"      | new Date(2015,12,05)        |    new Date(2015,12,15)    |  4                       |   "En cours de traitement"
         "50"      | new Date(2015,12,15)        |    new Date(2015,12,30)    |  1                        |   "Confirmée"
-        "50"      | new Date(2015,12,15)        |    new Date(2015,12,30)    |  100                      |   "Refusée"
+        "50"      | new Date(2015,12,15)        |    new Date(2015,12,30)    |  5                      |   "Refusée"
 
 
 
@@ -41,7 +41,7 @@ class DemandeVisiteSpec extends Specification {
 
         where:
         unCode      | uneDateDebut               |    uneDateFin              |  unNombre                 |  unStatut
-        "5"         | new Date(2015,12,05)       |    null                    |  10                       |   "En cours de traitement"
+        "5"         | new Date(2015,12,05)       |    null                    |  4                       |   "En cours de traitement"
         "5"         | null                       |    new Date(2013,12,30)    |  5                        |   "Confirmée"
         "5"         | new Date(2015,12,15)       |    new Date(2012,12,15)    |  0                        |   "Refusée "
         ""          | new Date(2015,12,15)       |    new Date(2012,12,15)    |  0                        |   "Refusée "
