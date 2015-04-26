@@ -28,8 +28,8 @@ class ParseurCsvService {
                         telephone: colonne[4],
                         accessBus: colonne[5],
                         accessMetro: colonne[6])
-
-                museeService.insertOrUpdateMusee(unMusee, uneAdresse, unGestionnaire)
+                if (!Musee.findByNom(unMusee.nom))
+                    museeService.insertOrUpdateMusee(unMusee, uneAdresse, unGestionnaire)
             }
         }
 
