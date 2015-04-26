@@ -9,6 +9,7 @@ class Musee {
     String accessBus
     Adresse adresse
 
+
     static hasOne = [
             gestionnaire: Gestionnaire,
             //adresse: Adresse
