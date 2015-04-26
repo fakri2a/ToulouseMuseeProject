@@ -59,9 +59,9 @@
 <div class="fieldcontain ${hasErrors(bean: museeInstance, field: 'demandeVisiteMusees', 'error')} ">
 	<label for="demandeVisiteMusees">
 		<g:message code="musee.demandeVisiteMusees.label" default="Demande Visite Musees" />
-		
+
 	</label>
-	
+
 <ul class="one-to-many">
 <g:each in="${museeInstance?.demandeVisiteMusees?}" var="d">
     <li><g:link controller="demandeVisiteMusee" action="show" id="${d.id}">${d?.encodeAsHTML()}</g:link></li>

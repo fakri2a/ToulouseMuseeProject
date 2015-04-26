@@ -34,7 +34,7 @@ class MuseeService {
         unMusee.delete()
     }
 
-    List<Musee> searchMusees(String unNom, String unCodePostal, String uneRue, String unAccesBus, String unAccesMetro) {
+    List<Musee> searchMusees(String unNom, String unCodePostal, String uneRue) {
         def criteria = Musee.createCriteria()
         List<Musee> result = criteria.list {
             if (unNom) {
@@ -55,12 +55,7 @@ class MuseeService {
                 }
             }
 
-            if (unAccesBus) {
-                like("accessBus", "%${unAccesBus}%")
-            }
-            if (unAccesMetro) {
-                like("accessMetro", "%${unAccesMetro}%")
-            }
+
         }
         result
     }

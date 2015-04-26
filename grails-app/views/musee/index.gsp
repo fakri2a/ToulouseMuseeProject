@@ -41,19 +41,19 @@
 				<tbody>
 				<g:each in="${museeInstanceList}" status="i" var="museeInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
+
 						<td><g:link action="show" id="${museeInstance.id}">${fieldValue(bean: museeInstance, field: "nom")}</g:link></td>
-					
+
 						<td>${fieldValue(bean: museeInstance, field: "horairesOuverture")}</td>
-					
+
 						<td>${fieldValue(bean: museeInstance, field: "telephone")}</td>
-					
+
 						<td>${fieldValue(bean: museeInstance, field: "accessMetro")}</td>
-					
+
 						<td>${fieldValue(bean: museeInstance, field: "accessBus")}</td>
-					
+
 						<td>${fieldValue(bean: museeInstance, field: "adresse")}</td>
-					
+
 					</tr>
 				</g:each>
 				</tbody>

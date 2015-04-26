@@ -88,7 +88,7 @@
 			<p>Bienvenue sur notre site internet! Ici vous pouvez rechercher selon vos préférences tous les musées de toulouse!
             </p>
 
-            <g:form url="[controller: 'index', action: 'doSearch']">
+            <g:form url="[controller: 'musee', action: 'index']">
                 <FIELDSET>
           <legend>Rechercher des Musees: </legend> <br/>
                     <label for="musee">Nom du Musee</label>
@@ -104,9 +104,6 @@
                     <g:submitButton name="Rechercher"/>
                      </FIELDSET>
             </g:form>
-
-
-
 
         </div>
 	</body>
