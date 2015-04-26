@@ -103,7 +103,8 @@
                      <label for="Rue">Rue</label>
                     <g:textField name="rue" value="${session.getAttribute("rue")}"/> <br/> <br/>
                     <g:submitButton name="Rechercher"/>
-                     </FIELDSET>
+
+                </FIELDSET>
             </g:form>
 
 
