@@ -10,7 +10,6 @@ class FavorisService {
     List<Musee> museesFavoris
 
     def ajouterFavoris(Musee unMusee) {
-        if (museesFavoris*.nom.contains(unMusee.nom))
             museesFavoris << unMusee
     }
 
