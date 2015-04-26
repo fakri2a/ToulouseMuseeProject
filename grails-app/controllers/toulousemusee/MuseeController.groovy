@@ -17,9 +17,10 @@ class MuseeController {
      *
      * @return
      */
-    def search() {
-        def museeList = museeService.searchMusees(params.unNom, params.unCodePostal, params.uneRue)
-        render(view: 'index', model: [MuseeInstanceList: museeList, MuseeInstanceCount: museeList.size()])
+    def doSearchMusee(Integer max) {
+        params.max = Math.min(max ?: 5, 100)
+        def museeList = museeService.searchMusees(params.nom,params.codePostal, params.rue)
+        render(view: 'index', model: [museeInstanceList: museeList, museeInstanceCount: museeList.size()])
     }
     /**
      *
@@ -28,6 +29,7 @@ class MuseeController {
     def index(Integer max) {
         params.max = Math.min(max ?: 5, 100)
         respond Musee.list(params), model:[museeInstanceCount: Musee.count()]
+
     }
     /**
      *
