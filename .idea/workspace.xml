@@ -42,8 +42,8 @@
       <file leaf-file-name="DemandeVisiteMuseeServiceIntegrationSpec.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/integration/toulousemusee/DemandeVisiteMuseeServiceIntegrationSpec.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7366412" vertical-offset="550" max-vertical-offset="1260">
-              <caret line="52" column="64" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.015267176" vertical-offset="550" max-vertical-offset="1260">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -833,7 +833,7 @@
       <workItem from="1429985087496" duration="8593000" />
       <workItem from="1429995892411" duration="4271000" />
       <workItem from="1430005582010" duration="2115000" />
-      <workItem from="1430035772118" duration="12522000" />
+      <workItem from="1430035772118" duration="12607000" />
     </task>
     <task id="LOCAL-00001" summary="classe domaine maj">
       <created>1428399754938</created>
@@ -925,11 +925,17 @@
       <option name="project" value="LOCAL" />
       <updated>1430051573599</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Service de visite finit + test qui passe!">
+      <created>1430051663200</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1430051663200</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71874000" />
+    <option name="totallyTimeSpent" value="71959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="24" width="1539" height="876" extended-state="6" />
@@ -1457,8 +1463,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/integration/toulousemusee/DemandeVisiteMuseeServiceIntegrationSpec.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7366412" vertical-offset="550" max-vertical-offset="1260">
-          <caret line="52" column="64" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.015267176" vertical-offset="550" max-vertical-offset="1260">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
