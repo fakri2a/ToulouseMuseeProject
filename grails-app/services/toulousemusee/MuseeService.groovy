@@ -16,14 +16,16 @@ class MuseeService {
      * @return
      */
     Musee insertOrUpdateMusee(Musee unMusee, Adresse uneAdresse, Gestionnaire unGestionnaire) {
+
         unMusee.setAdresse(uneAdresse)
         uneAdresse.setMusee(unMusee)
+
         unMusee.setGestionnaire(unGestionnaire)
         unGestionnaire.addToMusees(unMusee)
 
-        uneAdresse.save(flush: true)
         unGestionnaire.save(flush: true)
         unMusee.save(flush: true)
+        uneAdresse.save(flush: true)
 
         return unMusee
     }
