@@ -4,6 +4,7 @@ import grails.transaction.Transactional
 
 @Transactional
 class FavorisController {
+
     /**
      *
      */
@@ -14,8 +15,8 @@ class FavorisController {
      * @param unMusee
      * @return
      */
-    def ajouterFavoris() {
-        favorisService.ajouterFavoris(Musee.findById(params["id"] as long))
+    def ajouterAuxFavoris() {
+        favorisService.ajouterFavoris(Musee.findByNom(params["nom"] as String))
         redirect(controller: "musee", action: "search")
     }
 
@@ -25,7 +26,7 @@ class FavorisController {
      * @return
      */
     def enleverFavoris() {
-        favorisService.enleverFavoris(Musee.findById(params["id"] as long))
+        favorisService.enleverFavoris(Musee.findByNom(params["nom"] as String))
         redirect(controller: "musee", action: "search")
     }
 
